@@ -21,6 +21,7 @@ model = VGG16Like()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
 print_every = 200
-tt(model, optimizer,loader_train, loader_val, epochs=10)
+tt(model, optimizer,loader_train, loader_val, epochs=3)
+check_accuracy(model, loader_test)
 torch.save(model.state_dict(), './handWrittenModel.pkl')
 
