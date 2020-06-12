@@ -15,12 +15,15 @@ class VGG16Like(nn.Module):
         self.block4 = self._three_conv_layer(256, 512, 512, 512)
         self.prediction = nn.Sequential(
             Flatten(),
+            
             nn.Linear(512, 512),
+            nn.LayerNorm(512),
             nn.ReLU(True),
-            nn.Dropout(True),
+
             nn.Linear(512, 512),
+            nn.LayerNorm(512),
             nn.ReLU(True),
-            nn.Dropout(True),
+
             nn.Linear(512, 10)
         )
 
