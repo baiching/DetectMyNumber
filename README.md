@@ -1,7 +1,7 @@
 # Detect My Number
 ## Hand written digits recognition
 
-It is as the name suggests recognises handwritten digits from famous MNIST dataset. It got 99% accuracy on training set just after training 1.5 hour on CPU.
+It is as the name suggests recognises handwritten digits from famous MNIST dataset. It got 98.60% accuracy on training and 99.16% on test set just after training 2 hour on CPU.
 
 
 # Dependency :
