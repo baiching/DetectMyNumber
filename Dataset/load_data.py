@@ -14,11 +14,11 @@ def load_mnist():
 
     mnist_train = dset.MNIST('./', train=True, download=True, transform=transform)
     loader_train = DataLoader(mnist_train, batch_size=64,
-                            sampler=sampler.SubsetRandomSampler(range((NUM_OF_TRAIN))))
+                            sampler=sampler.SubsetRandomSampler(range(NUM_OF_TRAIN)))
     
     mnist_val = dset.MNIST('./', train=True, download=True, transform=transform)
     loader_val = DataLoader(mnist_val, batch_size=64,
-                            sampler=sampler.SubsetRandomSampler(range((NUM_OF_TRAIN, 50000))))
+                            sampler=sampler.SubsetRandomSampler(range(NUM_OF_TRAIN, 50000)))
     
     mnist_test = dset.MNIST('./', train=False, download=True, transform=transform)
     loader_test = DataLoader(mnist_test, batch_size=64)
